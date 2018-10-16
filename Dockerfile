@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 	&& apt-get purge --auto-remove -y curl gnupg \
 	&& rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y supervisor
+# RUN apt-get update && apt-get install -y supervisor
     
 # Expose port 9222 for devtools
 EXPOSE 9222
