@@ -37,7 +37,7 @@ RUN groupadd -r scraper_user && useradd -r -g scraper_user -G audio,video scrape
 USER scraper_user
 
 ENTRYPOINT ["dumb-init", "--"]
-CMD ["google-chrome-unstable","--remote-debugging-port=3000 --remote-debugging-address=0.0.0.0 --headless"]
+CMD ["google-chrome-stable","--remote-debugging-port=3000 --remote-debugging-address=0.0.0.0 --headless"]
 
 # Expose port 9222 for devtools
 EXPOSE 3000
