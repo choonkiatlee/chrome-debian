@@ -34,7 +34,7 @@ RUN groupadd -r scraper_user && useradd -r -g scraper_user -G audio,video scrape
     && chown -R scraper_user:scraper_user /home/scraper_user 
 
 # Run everything after as non-privileged user.
-USER scraper_user
+#USER scraper_user
 
 ENTRYPOINT ["dumb-init", "--"]
 CMD ["google-chrome-stable","--remote-debugging-port=3000 --remote-debugging-address=0.0.0.0 --headless --no-sandbox --disable-gpu"]
